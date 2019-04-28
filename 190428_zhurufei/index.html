@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script>
+			
+			function f(x,y){
+				return x+y;
+			}
+			function o(a,b){
+				return a*b;
+			}
+			alert(f.call(o,3,4))
+			
+			
+			
+			
+			
+			function f1(x,y){
+				return x+y;
+			}
+			function o(a,b){
+				return a*b;
+			}
+			alert(f1.apply(o,[3,4]));
+			
+			
+			
+			
+			function max(){
+				var m = Number.NEGATIVE_INFINITY;
+				for(var i=0;i<arguments.length;i++){
+					if(arguments[i]>m)
+						m=arguments[i];
+				}
+				return m;
+			}
+			var a=[1,4,2,6,8,0];
+			var m=max.apply(Object,a);
+			alert(m);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
