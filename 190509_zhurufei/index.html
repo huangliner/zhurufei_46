@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			.banner{
+				width: 217px;
+				height: 299px;
+				border: 1px solid red;
+				margin: 0 auto;
+				margin-top: 50px;
+				position: relative;
+			}
+			.banner .pic li{
+				position: absolute;
+				display: none;
+			}
+			.banner .num{
+				position: absolute;
+				bottom: 30px;
+				left: 10%;
+				
+			}
+			.banner .num li{
+				width: 16px;
+				height: 16px;
+				background: white;
+				float: left;
+				margin-left: 25px;
+				border-radius: 50%;
+			}
+		</style>
+		
+		<script src="img/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".banner .pic li").eq(0).show();
+				$(".banner .num li").eq(0).css("opacity","0.5");
+				
+				$(".banner .num li").mouseover(function(){
+					$(this).css("opacity","0.5").siblings(".banner .num li").css("opacity","1");
+					
+					var nb=$(this).index();
+					$(".banner .pic li").eq(nb).fadeIn().siblings().fadeOut();
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="banner">
+			<ul class="pic">
+				<li>
+					<a href="#">
+						<img src="img/电影2.png" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/电影3.png" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/电影4.png" />
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="img/电影5.png" />
+					</a>
+				</li>
+			</ul>
+			
+			<ol class="num">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ol>
+		</div>
+	</body>
+</html>
