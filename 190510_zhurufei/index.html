@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+		<input type="button" value="1" />
+		<input type="button" value="2" />
+		<input type="button" value="3" />
+		<input type="button" value="4" />
+		<input type="button" value="5" />
+		<input type="button" value="6" />
+		<input type="button" value="7" />
+		<input type="button" value="8" />
+		<input type="button" value="9" />
+		<input type="button" value="10" />
+		<input type="button" value="11" />
+		<input type="button" value="12" />
+		<input type="button" value="13" />
+		<input type="button" value="14" />
+		<input type="button" value="15" />
+		<script>
+			var inputLists=document.querySelectorAll("input");
+			for(var arr=0;arr<inputLists.length;arr++){				
+				inputLists[arr].onclick=(function (obj){
+					return function(){
+					alert(obj+1);
+				}
+				}(arr));
+			}
+		</script>
+	</body>
+</html>
