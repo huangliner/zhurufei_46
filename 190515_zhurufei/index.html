@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+
+			}
+			ul{
+				list-style-type: none;
+			}
+			a{
+				text-decoration: none;
+			}
+			#zzz{
+				width: 400px;
+				height: 170px;
+				margin: 0 auto;
+				margin-top: 300px;
+				background: #E6787A;
+			}
+			#aaa{
+				height: 40px;
+			}
+			#aaa li{
+				display: block;
+				float: left;
+				width: 100px;
+				line-height: 35px;
+				text-align: center;
+				background-color: #F31013;
+			}
+			#aaa li:hover{
+				cursor: pointer;
+				color: #0011FF;
+			}
+			#aaa li.wenzi{
+				background-color: #EA484B;
+			}
+
+			#zzz div li{
+				height: 30px;
+				line-height: 35px;
+				text-indent: 20px;
+			}
+			.cheng{
+				display: block;
+			}
+			.wenzi1{
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="zzz">
+			<ul id="aaa">
+				<li class="wenzi">公告</li>
+				<li>规则</li>
+				<li>论坛</li>
+				<li>安全</li>
+			</ul>
+			<div>
+				<ul>
+					<li><a href="javascript:;" style="color: #000000">数据七夕：金牛爱送玫瑰</a></li>
+					<li><a href="javascript:;" style="color: #000000">阿里打造“互联网监管”</a></li>
+					<li><a href="javascript:;" style="color: #000000">10万家店60万新品 </a></li>
+					<li><a href="javascript:;" style="color: #000000">全球最大网上时装周 </a></li>
+				</ul>
+			</div>
+			<div class="wenzi1">
+				<ul>
+					<li><a href="javascript:;" style="color: #000000">“全额返现”要管控了</a></li>
+					<li><a href="javascript:;" style="color: #000000">淘宝新规发布汇总（7月）</a></li>
+					<li><a href="javascript:;" style="color: #000000">炒信规则调整意见反馈</a></li>
+					<li><a href="javascript:;" style="color: #000000">质量相关规则近期变更</a></li>
+				</ul>
+			</div>
+			<div class="wenzi1">
+				<ul>
+					<li><a href="javascript:;" style="color: #000000">高考报名人数数十年来首次破千万</a></li>
+					<li><a href="javascript:;" style="color: #000000">每次两条大驱同时下水，老牌船厂宣告强势回归</a></li>
+					<li><a href="javascript:;" style="color: #000000">人民日报：君子之国，先礼后兵</a></li>
+					<li><a href="javascript:;" style="color: #000000">美国“旧船票”登不上各国“新客船”</a></li>
+				</ul>
+			</div>
+			<div class="wenzi1">
+				<ul>
+					<li><a href="javascript:;" style="color: #000000">接此文件，毁一家店</a></li>
+					<li><a href="javascript:;" style="color: #000000">账号安全神器阿里钱盾</a></li>
+					<li><a href="javascript:;" style="color: #000000">新版阿里110上线了</a></li>
+					<li><a href="javascript:;" style="color: #000000">卖家学违禁避免被处罚</a></li>
+				</ul>
+			</div>
+		</div>
+			<script>
+				
+				function getTad(){
+					var arr=document.getElementById("aaa");
+					var obo=arr.getElementsByTagName("li");
+					var ccc=document.getElementById("zzz");
+					var rrr=ccc.getElementsByTagName("div");
+					for (var i=0;i<obo.length;i++){
+						obo[i].index=i;
+						obo[i].onmouseover=function(){
+							for (var i=0;i<obo.length;i++){
+								obo[i].className="";
+							}
+							this.className="wenzi";
+							for (var j=0;j<rrr.length;j++){
+								rrr[j].className="wenzi1";
+							}
+							rrr[this.index].className="cheng";
+						}
+					}
+				}
+				getTad();
+			</script>
+	</body>
+</html>
